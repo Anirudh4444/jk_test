@@ -213,23 +213,25 @@ Response:
 
 
 Delete a Book
+
 Request:
 sh
 
 curl -X DELETE "http://localhost:5000/books/2" -H "Authorization: Bearer <JWT_TOKEN>"
 Response:
 •	204 No Content
+
+
 Add a Review to a Book
+
 Request:
 sh
-
 curl -X POST "http://localhost:5000/books/1/reviews" -H "Authorization: Bearer <JWT_TOKEN>" -H "Content-Type: application/" -d '{
   "user_id": 1,
   "review_text": "Great book!",
   "rating": 5
 }'
 Response:
-
 
 {
   "id": 1,
@@ -240,7 +242,7 @@ Response:
 }
 
 
-****Summary of Endpoints
+**Summary of Endpoints
 Endpoint	Method	Description
 /register	POST	Register a new user
 /login	POST	Log in a user
@@ -275,5 +277,5 @@ o	Test Case: test_add_review
 o	Description: Tests adding a review to a specific book.
 8.	Retrieving All Reviews for a Book
 o	Test Case: test_get_reviews
-o	Description: Tests retrieving all reviews for a specific book.****
+o	Description: Tests retrieving all reviews for a specific book.**
 
